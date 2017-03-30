@@ -1,0 +1,25 @@
+{
+  "name": "fd-read-stream",
+  "version": "0.0.0",
+  "description": "Readable stream that reads from a file descriptor. Supports tailing and retries.",
+  "main": "index.js",
+  "dependencies": {
+    "readable-stream": "^2.2.6"
+  },
+  "devDependencies": {
+    "standard": "^9.0.2"
+  },
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mafintosh/fd-read-stream.git"
+  },
+  "author": "Mathias Buus (@mafintosh)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mafintosh/fd-read-stream/issues"
+  },
+  "homepage": "https://github.com/mafintosh/fd-read-stream"
+}
