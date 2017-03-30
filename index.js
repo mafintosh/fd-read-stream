@@ -8,7 +8,7 @@ function ReadStream (fd, opts) {
   if (!(this instanceof ReadStream)) return new ReadStream(fd, opts)
   if (!opts) opts = {}
 
-  stream.Readable.call(this)
+  stream.Readable.call(this, {highWaterMark: opts.highWaterMark || 65536})
 
   this.fd = fd
   this.bytesRead = 0
