@@ -11,7 +11,7 @@ function ReadStream (fd, opts) {
   stream.Readable.call(this, {highWaterMark: opts.highWaterMark || 65536})
 
   this.fd = fd
-  this.bytesRead = 0
+  this.bytesRead = opts.startOffset || 0
   this.destroyed = false
 
   this._retry = opts.retry || 0

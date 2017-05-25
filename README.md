@@ -25,8 +25,9 @@ Create a new readable stream. Options include:
 
 ``` js
 {
-  tail: false // keep reading the fd forever (will pool it)
-  retry: 0 // wait this many ms and retry a read once if it fails
+  tail: false, // keep reading the fd forever (will pool it)
+  retry: 0, // wait this many ms and retry a read once if it fails
+  startOffset: 0 // byte offset to start reading from.
 }
 ```
 
