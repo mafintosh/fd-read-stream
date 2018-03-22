@@ -1,6 +1,7 @@
 var stream = require('readable-stream')
 var fs = require('fs')
 var util = require('util')
+var bufferAlloc = require('buffer-alloc')
 
 module.exports = ReadStream
 
@@ -50,7 +51,7 @@ ReadStream.prototype.destroy = function (err) {
 
 ReadStream.prototype._read = function (size) {
   if (this.destroyed) return
-  var buf = new Buffer(size)
+  var buf = bufferAlloc(size)
   fs.read(this.fd, buf, 0, buf.length, this.bytesRead, this._callback)
 }
 
